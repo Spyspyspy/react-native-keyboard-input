@@ -33,12 +33,12 @@
     "e2e": "detox test"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
-    "react-native-keyboard-tracking-view": "^5.5.0"
+    "lodash": "^4.17.4"
   },
   "peerDependencies": {
     "react": "16.9.0",
-    "react-native": "0.61.4"
+    "react-native": "0.61.4",
+    "react-native-keyboard-tracking-view": "^5.5.0"
   },
   "devDependencies": {
     "@babel/core": "7.7.2",

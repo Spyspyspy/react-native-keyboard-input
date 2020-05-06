@@ -23,6 +23,7 @@ export default class KeyboardAccessoryView extends Component {
     manageScrollView: PropTypes.bool,
     requiresSameParentToManageScrollView: PropTypes.bool,
     addBottomView: PropTypes.bool,
+    bottomViewColor: PropTypes.string,
     allowHitsOutsideBounds: PropTypes.bool,
   };
   static defaultProps = {
@@ -125,6 +126,12 @@ export default class KeyboardAccessoryView extends Component {
     }
   }
 
+  resetTracking() {
+    if (this.trackingViewRef) {
+      this.trackingViewRef.resetTracking();
+    }
+  }
+
   render() {
     return (
       <KeyboardTrackingView
@@ -136,6 +143,7 @@ export default class KeyboardAccessoryView extends Component {
         manageScrollView={this.props.manageScrollView}
         requiresSameParentToManageScrollView={this.props.requiresSameParentToManageScrollView}
         addBottomView={this.props.addBottomView}
+        bottomViewColor={this.props.bottomViewColor}
         allowHitsOutsideBounds={this.props.allowHitsOutsideBounds}
       >
         {this.props.renderContent && this.props.renderContent()}
